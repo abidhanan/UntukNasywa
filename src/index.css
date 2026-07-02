@@ -1,0 +1,58 @@
+:root {
+  --paper: #fff7fb;
+  --ink: #3f2331;
+  --muted: #8d6375;
+  --rose-400: #ff9ab8;
+  --rose-500: #ff6f9f;
+  --rose-600: #e9437c;
+  --rose-700: #c92e66;
+  --rose-border: #ffd4e2;
+  --mint: #74d6b1;
+  --lemon: #ffd766;
+  --lilac: #b894f6;
+  --display: 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif;
+  --body: Inter, 'Segoe UI', system-ui, sans-serif;
+  --shadow-sm: 0 6px 16px rgba(128, 49, 82, 0.1);
+  --shadow-md: 0 14px 32px rgba(128, 49, 82, 0.14);
+  --shadow-lg: 0 22px 54px rgba(128, 49, 82, 0.16);
+  --shadow-xl: 0 30px 80px rgba(120, 34, 73, 0.18);
+  font-family: var(--body);
+  color: var(--ink);
+  background:
+    linear-gradient(135deg, #fff6fa 0%, #ffe5ef 42%, #fff9e8 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: #fff6fa;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
