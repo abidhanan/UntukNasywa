@@ -280,7 +280,7 @@ function WelcomeScreen({ onAccept }) {
   return (
     <section className="screen welcome-screen" aria-labelledby="welcome-title">
       <div className="welcome-copy">
-        <h1 id="welcome-title">Nasywa Hasna Nabila</h1>
+        <h1 id="welcome-title">Hai! Nasywa Hasna Nabila</h1>
         <p className="question">Mumpung kamu udah selesai UAS, main yukk</p>
       </div>
 
@@ -329,8 +329,8 @@ function KknNoticeScreen({ onBack, onNext }) {
       <ScreenHeader
         id="kkn-title"
         icon={<Calendar size={24} />}
-        title="Sebentar lagi aku KKN"
-        text="Sebelum jadwalku mulai padat, kita curi waktu main dulu ya."
+        title="Aku Sebentar Lagi KKN"
+        text="Ternyata aku gak jadi libur panjang, karena udah persiapan KKN :("
       />
 
       <figure className="kkn-photo-card">
@@ -345,8 +345,7 @@ function KknNoticeScreen({ onBack, onNext }) {
       <div className="kkn-message">
         <Heart size={20} fill="currentColor" />
         <p>
-          Aku sebentar lagi KKN. Sebelum KKN, kita usahakan main dulu mumpung kamu
-          lagi libur semesteran.
+          Mumpung aku belum KKN dan mumpung kamu udah selesai UAS, ayo kita main dulu plisss 🥺
         </p>
       </div>
 
@@ -361,15 +360,15 @@ function ScheduleScreen({ form, onBack, onNext, onUpdate }) {
       <ScreenHeader
         id="schedule-title"
         icon={<Calendar size={24} />}
-        title="Pilih tanggal & jam"
-        text="Biar rencana manisnya punya tempat di kalender."
+        title="Pilih Tanggal & Jam"
+        text="Kamu yang pilih tanggalnya yaa, InsyaAllah aku kapan aja longgar 😁"
       />
 
       <div className="field-grid two-columns">
         <label className="field-card picker-field">
           <span>
             <Calendar size={18} />
-            Tanggal yang bisa
+            Hari & Tanggal
           </span>
           <div className="input-with-icon">
             <input
@@ -385,7 +384,7 @@ function ScheduleScreen({ form, onBack, onNext, onUpdate }) {
         <label className="field-card picker-field">
           <span>
             <Clock size={18} />
-            Jam berapa
+            Jam
           </span>
           <div className="input-with-icon">
             <input
@@ -401,7 +400,7 @@ function ScheduleScreen({ form, onBack, onNext, onUpdate }) {
       <div className="date-preview">
         <Heart size={18} fill="currentColor" />
         <span>
-          Oke, dicatat: <strong>{formatDate(form.date)}</strong> jam{' '}
+          Oke sip aku catat: <strong>{formatDate(form.date)}</strong> jam{' '}
           <strong>{form.time || 'nanti dipilih'}</strong>.
         </span>
       </div>
@@ -417,8 +416,8 @@ function FavoriteThingsScreen({ form, onBack, onNext, onUpdate }) {
       <ScreenHeader
         id="favorite-things-title"
         icon={<Heart size={24} fill="currentColor" />}
-        title="Hal favorit Nasywa"
-        text="Isi manual ya, biar jawabannya benar-benar versi kamu."
+        title="Hal Favorit"
+        text="Tolong diisi dongg, biar aku tau hal favoritmu apa ajaa xixixi"
       />
 
       <div className="field-grid manual-favorites">
@@ -431,7 +430,7 @@ function FavoriteThingsScreen({ form, onBack, onNext, onUpdate }) {
             type="text"
             value={form.food}
             onChange={(event) => onUpdate('food', event.target.value)}
-            placeholder="Contoh: seblak level sayang"
+            placeholder="Contoh: Seblak (jangan keseringan tapi)"
           />
         </label>
 
@@ -444,7 +443,7 @@ function FavoriteThingsScreen({ form, onBack, onNext, onUpdate }) {
             type="text"
             value={form.drink}
             onChange={(event) => onUpdate('drink', event.target.value)}
-            placeholder="Matcha, es teh, coklat, apa aja"
+            placeholder="Contoh: Kopi lih aku daripada dia"
           />
         </label>
 
@@ -457,7 +456,7 @@ function FavoriteThingsScreen({ form, onBack, onNext, onUpdate }) {
             type="text"
             value={form.color}
             onChange={(event) => onUpdate('color', event.target.value)}
-            placeholder="Pink soft, biru langit, lilac..."
+            placeholder="Contoh: Pink, biru, ungu, atau lainnya..."
           />
         </label>
 
@@ -470,7 +469,7 @@ function FavoriteThingsScreen({ form, onBack, onNext, onUpdate }) {
             type="text"
             value={form.song}
             onChange={(event) => onUpdate('song', event.target.value)}
-            placeholder="Lagu yang bikin senyum"
+            placeholder="Contoh: Kota Ini Tak Sama Tanpamu - Nadhif Basmalah"
           />
         </label>
 
@@ -483,7 +482,7 @@ function FavoriteThingsScreen({ form, onBack, onNext, onUpdate }) {
             type="text"
             value={form.comfort}
             onChange={(event) => onUpdate('comfort', event.target.value)}
-            placeholder="Bunga, foto lucu, ngobrol lama..."
+            placeholder="Contoh: Night ride, nyore, atau lainnya..."
           />
         </label>
       </div>
@@ -499,24 +498,24 @@ function PlanDetailsScreen({ form, onBack, onNext, onUpdate }) {
       <ScreenHeader
         id="plan-title"
         icon={<Gamepad2 size={24} />}
-        title="Rencana mainnya"
-        text="Tinggal pilih gaya mainnya, nanti aku rapikan jadi rencana."
+        title="Rencana Main"
+        text="Bantu kasih saran yaaa"
       />
 
       <div className="field-grid">
         <ColorPaletteField
-          label="Warna atasan"
+          label="Dresscode warna atasan"
           value={form.topColor}
           onChange={(value) => onUpdate('topColor', value)}
         />
         <ColorPaletteField
-          label="Warna bawahan"
+          label="Dresscode warna bawahan"
           value={form.bottomColor}
           onChange={(value) => onUpdate('bottomColor', value)}
         />
         <SelectField
           icon={<Gamepad2 size={18} />}
-          label="Ide main"
+          label="Enaknya main apa?"
           value={form.activity}
           options={selectOptions.activity}
           onChange={(value) => onUpdate('activity', value)}
@@ -530,7 +529,7 @@ function PlanDetailsScreen({ form, onBack, onNext, onUpdate }) {
           <textarea
             value={form.notes}
             onChange={(event) => onUpdate('notes', event.target.value)}
-            placeholder="Tulis request lucu, pantangan, atau kode rahasia"
+            placeholder="Contoh: Kalau otw kabarin yaa"
             rows="4"
           ></textarea>
         </label>
@@ -562,8 +561,8 @@ function ConfirmationScreen({ form, onEdit, onSend }) {
       </div>
 
       <div className="confirm-copy">
-        <h1 id="confirm-title">Deal, jadi main!</h1>
-        <p>Ini draft rencana paling manis versi Nasywa.</p>
+        <h1 id="confirm-title">Deal, kita jadi main!</h1>
+        <p>Ini rencana main kitaaa</p>
       </div>
 
       <dl className="summary-list">
@@ -754,9 +753,9 @@ function MusicPlayer({ audioRef, gesturePlayAtRef, isPlaying, playMusic, setIsPl
 
 function buildPlanMessage(form) {
   return [
-    'Haiii, aku sudah isi undangan mainnya 💗',
+    'Abiddd, aku sudah isi undangannya',
     '',
-    'Aku mau main sama kamu, ini pilihanku yaa 🥺✨',
+    'Aku jadinya mau main sama kamu xixixi',
     '',
     `📅 Tanggal: ${formatDate(form.date)}`,
     `⏰ Jam: ${form.time || '-'}`,
@@ -768,14 +767,14 @@ function buildPlanMessage(form) {
     `🎧 Lagu: ${form.song || '-'}`,
     `🌷 Kamu sukanya: ${form.comfort || '-'}`,
     '',
-    'Dresscode gemas:',
+    'Dresscode:',
     `👚 Atasan: ${form.topColor || '-'}`,
     `👖 Bawahan: ${form.bottomColor || '-'}`,
     '',
-    `🎮 Ide main: ${form.activity || '-'}`,
+    `🎮 Rencana main: ${form.activity || '-'}`,
     `💌 Catatan kecil: ${form.notes || '-'}`,
     '',
-    'Udah yaa, sekarang tinggal kamu bales dan bikin rencananya jadi beneran 😳💕',
+    'Udah yaa, sampai jumpa waktu main besokk!',
   ].join('\n')
 }
 
